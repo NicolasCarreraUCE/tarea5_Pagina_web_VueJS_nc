@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Ingresar Estudiantes</h1>
+    </header>
+    <nav></nav>
+    <div class="contenedor" id="myApp">
+        <section class="formulario">
+            <h2>Formulario</h2>
+                <label class="componente" for="nombre">Nombre</label>
+                <input class="componente" type="text" name="nombre" id="nombre" v-model="nombre">
+                <label class="componente" for="apellido">Apellido</label>
+                <input class="componente" type="text" name="apellido" id="apellido" v-model="apellido">
+                <label class="componente" for="direccion">Dirección</label>
+                <input class="componente" type="text" name="direccion" id="direccion" v-model="direccion">
+                <button class="componente" id="btnIngresar" v-on:click="agregarEstudiante">Ingresar estudiante</button>
+            
+        </section>
+        <section class="lista">
+            <h2>Lista de estudaintes</h2>
+            <ol>
+                <li v-for="estudiante in listaEstudaintes">
+                    <div v-if="estudiante.nombre !== ''"><b>Nombre: </b>{{estudiante.nombre}}</div>
+                    <div v-if="estudiante.apellido !== ''"><b>Apellido: </b>{{estudiante.apellido}}</div>
+                    <div v-if="estudiante.direccion !== ''"><b>Direccion: </b>{{estudiante.direccion}}</div>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <footer></footer>
+
+    <script src="js/configuracion.js"></script>
+</body>
+</html>

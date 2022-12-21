@@ -1,0 +1,40 @@
+header h1 {
+    text-align: center;
+}
+
+section {
+    background-color: #ecf0f1;
+    padding: 10px 50px 50px 50px;
+    margin: 5px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    width: 1000px;
+    margin: auto;
+}
+
+.contenedor #direccion {
+    width: 100%;
+}
+
+.contenedor .componente {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario button {
+    margin-top: 15px;
+    background-color: #e67e22;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #d35400;
+}
